@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path(File.join(File.dirname(__FILE__), "..")))
+
+require 'rubygems'
+require 'lib/light_collection'
+require 'lib/runner'
+require 'lib/go_monitor'
+require 'lib/hudson_monitor'
+require 'lib/stdout_light'
+
+
+devices = StdoutLight.devices
+
+puts "buildlight has found #{devices.size} lights connected."
+
+lights = { :online_channel => StdoutLight.new(devices[0]),
+           :addressing => StdoutLight.new(devices[1]),
+           :ordering => StdoutLight.new(devices[2]),
+         }
+
+lc = LightCollection.new(lights)
+lc.run

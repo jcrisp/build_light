@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cp -R . /usr/share
+cp bin/lightd /etc/init.d
+chkconfig --add lightd

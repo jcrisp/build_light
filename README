@@ -1,0 +1,7 @@
+Dependency:
+lib usb (need the older version)
+ i.e. sudo port install libusb-compat
+
+Originally developed by Duncan Stewart
+
+Edit light_collection.rb to customise to your needs.
