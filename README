@@ -1,7 +1,9 @@
 Dependency:
 lib usb (need the older version)
  i.e. sudo port install libusb-compat
+ or brew install libusb-compat
 
 Originally developed by Duncan Stewart
 
 Edit light_collection.rb to customise to your needs.
+May need changes for different operating systems. Will work on MacOS X.

@@ -75,7 +75,7 @@ private
       end
     end
     @handle.set_configuration(@device.configurations.first)
-    @handle.claim_interface(INTERFACE_ID)
+    #@handle.claim_interface(INTERFACE_ID) not required??
     @handle
   end
 end
